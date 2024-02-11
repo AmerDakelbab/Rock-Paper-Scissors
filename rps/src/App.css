@@ -1,0 +1,666 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Barlow Semi Condensed;
+}
+
+body {
+  background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 25%;
+  right: 25%;
+  top: 2em;
+  background-color: transparent;
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 0.8em;
+  height: 9em;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+}
+
+.titles p {
+  margin: 0;
+  font-size: 1.8em;
+  margin-bottom: -12px;
+  color: white;
+  font-weight: 700;
+  margin-left: 0.8em;
+}
+
+.score-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 8.5em;
+  height: 7em;
+  background-color: white;
+  margin-top: 1em;
+  margin-right: 1em;
+  border-radius: 0.6em;
+}
+
+.score-title {
+  font-size: 1.1em;
+  color: hsl(229, 64%, 46%);
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.score {
+  font-size: 3.5em;
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+}
+
+.pentagon-container {
+  margin-top: 5vh;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.pentagon {
+  position: absolute;
+}
+
+.scissors-button {
+  cursor: pointer;
+  position: relative;
+  top: -13em;
+  left: 24em;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.scissors-buttonr {
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.scissors-button img {
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+  padding: 2em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.4) inset;
+}
+
+.scissors-buttonr img {
+
+  width: 7em;
+  height: 7em;
+  padding: 9em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4) inset;
+}
+
+.paper-button {
+  cursor: pointer;
+  position: relative;
+  top: -3em;
+  left: 25em;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.paper-buttonr {
+
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4) inset;
+}
+
+.paper-button img {
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+  padding: 2em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 5px 25px 10px rgba(0, 0, 0, 0.4) inset;
+}
+
+.paper-buttonr img {
+
+  width: 7em;
+  height: 7em;
+  padding: 9em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4) inset;
+}
+
+.rock-button {
+  cursor: pointer;
+  position: relative;
+  top: 12em;
+  left: 10em;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(349, 70%, 56%), hsl(349, 71%, 52%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.rock-buttonr {
+
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(349, 70%, 56%), hsl(349, 71%, 52%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.rock-button img {
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+  padding: 2em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.4) inset;
+}
+
+.rock-buttonr img {
+
+  width: 7em;
+  height: 7em;
+  padding: 9em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4) inset;
+}
+
+.lizard-button {
+  cursor: pointer;
+  position: relative;
+  top: 12em;
+  left: -21em;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(261, 72%, 63%), hsl(261, 73%, 60%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.lizard-buttonr {
+
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(261, 72%, 63%), hsl(261, 73%, 60%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.lizard-button img {
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+  padding: 2em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.4) inset;
+}
+
+.lizard-buttonr img {
+
+  width: 7em;
+  height: 7em;
+  padding: 9em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4) inset;
+}
+
+.spock-button {
+  cursor: pointer;
+  position: relative;
+  top: -3em;
+  left: -37em;
+  width: 12em;
+  height: 12em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(189, 58%, 57%), hsl(189, 59%, 53%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.spock-buttonr {
+
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to bottom, hsl(189, 58%, 57%), hsl(189, 59%, 53%));
+  box-shadow: 0 -6px 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+.spock-button img {
+  cursor: pointer;
+  width: 5em;
+  height: 5em;
+  padding: 2em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.4) inset;
+}
+
+.spock-buttonr img {
+
+  width: 7em;
+  height: 7em;
+  padding: 9em;
+  object-fit: fill;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.4) inset;
+}
+
+.rules-div {
+  position: fixed;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 3em;
+  border-radius: 0.6em;
+}
+
+.rules-Title {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.rules-closing-button {
+  border: none;
+  background-color: transparent;
+  color: rgb(134, 134, 134);
+  font-size: 1.8em;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.rules-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1.5em;
+}
+
+.Rules {
+  position: absolute;
+  bottom: 2em;
+  right: 5em;
+  width: 7em;
+  height: 3em;
+  border-radius: 1em;
+  background-color: transparent;
+  border: hsl(217, 16%, 45%) 2px solid;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.Result-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.result-player {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7em;
+  padding: 0;
+}
+
+.player-p {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.7em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.play-again-button {
+  width: 15em;
+  height: 3em;
+  border-radius: 1em;
+  border: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: hsl(214, 47%, 23%);
+  margin: 1em 10em;
+  cursor: pointer;
+}
+
+.result-r {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+}
+
+.Rules-B {
+  background-color: transparent;
+  border: hsl(217, 16%, 45%) solid 2px;
+  width: 12em;
+  height: 3em;
+  text-align: center;
+  letter-spacing: 2px;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.Rules-flex {
+  position: fixed;
+  right: 1em;
+  bottom: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .header {
+    left: 5%;
+    right: 5%;
+    top: 1.5em;
+  }
+  
+  .titles {
+    margin-top: 1.5em;
+  }
+  
+  .titles p {
+    font-size: 1.3em;
+    margin-bottom: -9px;
+    margin-left: 1.5em;
+  }
+  
+  .score-area {
+    width: 8em;
+    border-radius: 0.4em;
+  }
+  
+  .score-title {
+    font-size: 1em;
+    letter-spacing: 2px;
+ }
+  
+  .score {
+    font-size: 3em;
+  }
+  
+  .pentagon-container {
+    margin-top: 3em;
+    height: 100vh;
+  }
+  .scissors-button {
+    top: -12em;
+    left: 20em;
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .scissors-buttonr {
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .scissors-button img {
+    padding: 1.5em;
+    object-fit: contain;
+  }
+  
+  .scissors-buttonr img {
+    padding: 1.5em;
+    object-fit: contain;
+    width: 5em;
+  height: 5em;
+  }
+  
+  .paper-button {
+    top: -3em;
+    left: 22em;
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .paper-buttonr {
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .paper-button img {
+    padding: 1.5em;
+    object-fit: contain;
+  }
+  
+  .paper-buttonr img {
+    padding: 1.5em;
+    object-fit: contain;
+    width: 5em;
+  height: 5em;
+  }
+  
+  .rock-button {
+    top: 12em;
+    left: 8em;
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .rock-buttonr {
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .rock-button img {
+    padding: 1.5em;
+    object-fit: contain;
+  }
+  
+  .rock-buttonr img {
+    padding: 1.5em;
+    object-fit: contain;
+    width: 5em;
+  height: 5em;
+  }
+  
+  .lizard-button {
+    cursor: pointer;
+    position: relative;
+    top: 12em;
+    left: -18em;
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .lizard-buttonr {
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .lizard-button img {
+    padding: 1.5em;
+    object-fit: contain;
+  }
+  
+  .lizard-buttonr img {
+    padding: 1.5em;
+    object-fit: contain;
+    width: 5em;
+  height: 5em;
+  }
+  
+  .spock-button {
+    top: -3em;
+    left: -33em;
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .spock-buttonr {
+    width: 10em;
+    height: 10em;
+    border: 14px solid transparent;
+  }
+  
+  .spock-button img {
+    padding: 1.5em;
+    object-fit: contain;
+  }
+  
+  .spock-buttonr img {
+    padding: 1.5em;
+    object-fit: contain;
+    width: 5em;
+  height: 5em;
+  }
+  
+  .rules-div {
+    padding: 2em;
+    border-radius: 0.7em;
+  }
+  
+  .rules-Title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: hsl(229, 25%, 31%);
+  }
+  
+  .rules-closing-button {
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+  
+  .rules-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -0.5em;
+  }
+  .Result-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .result-player {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7em;
+    padding: 0;
+  }
+  
+  .player-p {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 1.5em;
+  }
+  
+  .play-again-button {
+    border-radius: 0.5em;
+    margin: 0em 0em;
+    position: fixed;
+    bottom: 15%;
+    right: 22%;
+  }
+  
+  .result-r {
+    color: white;
+    font-size: 4em;
+    text-align: center;
+    position: fixed;
+    bottom: 26%;
+    right: 27%;
+  }
+  
+  .Rules-B {
+    margin-top: 0em;
+    width: 11em;
+    height: 3.5em;
+    letter-spacing: 3px;
+    border-radius: 10px;
+  }
+  
+  .Rules-flex {
+    position: fixed;
+    right: 35%;
+    bottom: 2em;
+  }
+  .result-playero {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    top: 35%;
+    left: 15%;
+
+  }
+  .result-playerth {
+    display: flex;
+    flex-direction: column-reverse;
+    position: fixed;
+    top: 35%;
+    right: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+}
